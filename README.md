@@ -1,4 +1,4 @@
-#Introducción a la computación :fa-file-code-o:
+# Introducción a la computación :fa-file-code-o:
 Estudiante: Tom Jordan Pérez López - 20240376J
 #### Ciclo: 2024 - 1 :fa-cubes: :fa-clock-o:
 ![Logo UNI](https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Uni-logo_transparente_granate.png/191px-Uni-logo_transparente_granate.png "Logo UNI") 
