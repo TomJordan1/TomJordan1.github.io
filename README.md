@@ -1,7 +1,9 @@
 # Introducción a la computación 🐱‍💻
 Estudiante: Tom Jordan Pérez López - 20240376J
 #### Ciclo: 2024 - 1 🤺
+<br></br>
 ![Logo UNI](https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Uni-logo_transparente_granate.png/191px-Uni-logo_transparente_granate.png "Logo UNI") 
+<br></br>
 # UNIVERSIDAD NACIONAL DE INGENIERÍA
 https://www.uni.edu.pe/
 
