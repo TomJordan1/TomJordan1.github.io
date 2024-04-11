@@ -1,4 +1,6 @@
 # Introducción a la computación 🐱‍💻
+"Hasta que no comiences a creer en ti mismo, no vas a tener una vida". - Rocky Balboa
+<br></br>
 Estudiante: Tom Jordan Pérez López - 20240376J
 #### Ciclo: 2024 - 1 🤺
 <br></br>
