@@ -1,10 +1,11 @@
 h1 {
   font-family: "Oswald", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 100px;
+  font-weight: 150vn;
   font-style: normal;
 }
 
 #inicio {
   font-family: verdana;
+  font-optical-sizing: auto;
 }
