@@ -1,7 +1,6 @@
 h1 {
   font-family: "Oswald", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 150vn;
   font-style: normal;
 }
 
@@ -16,5 +15,5 @@ h1 {
   font-optical-sizing: auto;
   color: black;
   background-color: white;
-  font-weight: 30vn
+  font-weight: 30px;
 }
