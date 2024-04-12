@@ -14,5 +14,7 @@ h1 {
 #p1 {
   font-family: verdana;
   font-optical-sizing: auto;
-   color: white;
+  color: black;
+  background-color: white;
+  font-weight: 30vn
 }
