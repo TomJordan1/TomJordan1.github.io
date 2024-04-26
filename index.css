@@ -1,7 +1,9 @@
-h1 {
+#Titulo {
   font-family: "Oswald", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
+  text-decoration: none;
+  color: white;
 }
 
 #inicio {
@@ -17,4 +19,11 @@ h1 {
   background-color: white;
   font-weight: 30px;
   font-style: bold;
+}
+
+.cajita { 
+  margin: 2.5%;
+  color: white;
+  text-decoration: none;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
