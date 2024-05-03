@@ -21,7 +21,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 </head>
 <body style="background-color:black">
-   <h1 style="color:white">
+  <h1 style="color:white">
     <strong> <a id="Titulo" href="index.html"> EL CAMINO DEL CACHIMBO </a> 
     </strong>
     <a href="https://acortar.link/1RztrP">
@@ -32,41 +32,183 @@
   <h5 style="color:white">
       No presiones la gorra del cachimbo, por favor.
   </h5>
-    <hr></hr>
-    <div class="cajita" id="fibo">
-    <h2>Sucesión de Fibonnaci</h2>
-        <div id="para1">  
-          <p align="justify">
-            "Esta sucesión fue descrita en Europa por Leonardo de Pisa, matemático italiano del siglo xiii también conocido como Fibonacci. Tiene numerosas aplicaciones en ciencias de la computación, matemática, tendencias bursátiles y teoría de juegos. También aparece en configuraciones biológicas, como por ejemplo en las ramas de los árboles, en la disposición de las hojas en el tallo, en las flores de alcachofas y girasoles, en las inflorescencias del brécol romanesco, en la configuración de las piñas de las coníferas, en la reproducción de varias especies, en la estructura espiral del caparazón de algunos moluscos, como el nautilus, dinámica de los huracanes, organización de las galaxias, proporciones del cuerpo humano, sus partes y subpartes y en cómo el ADN codifica el crecimiento de las formas orgánicas complejas".
-          </p> 
-        </div>
-        <p align="right"> - Wikipedia </p>
-        <div>
-          <form id="miFormulario">
-            <label for="numeroInput">Ingresa un número para calcular los números de Fibonacci hasta ese valor:</label>
-            <input type="number" id="numeroInput" name="numeroInput" min="0" step="1" placeholder="Estoy esperando...">
-            <button type="button" onclick="calcularFibonacci()">Calcular Fibonacci</button>
-          </form>
-          
-          <p id="resultado"></p>
-          
-          <script>
-            function calcularFibonacci() {
-              var n = parseInt(document.getElementById('numeroInput').value);
-              function fibonacciHastaN(n) {
-                var fibonacci = [0, 1];
-                while (fibonacci[fibonacci.length - 1] + fibonacci[fibonacci.length - 2] <= n) {
-                    var nextFibonacci = fibonacci[fibonacci.length - 1] + fibonacci[fibonacci.length - 2];
-                    fibonacci.push(nextFibonacci);
-                }
-                return fibonacci;
-              }
-              var numerosFibonacci = fibonacciHastaN(n);
+    <hr>
+  <div class="cajita">
+     <div id="fibonacci">
+      <h1>
+          1. Sucesión de fibonacci
+      </h1>
+      <script> 
+          function fibonacci(numero) {
+              let  contenedor = 0;
+              let contador = 0;
+              let a = 0;
+              let b = 1;
+              let c = 0;
+              document.write(c + " ; ")
+              document.write(1 + " ; ")
+          while (contador < numero) {
+              contenedor = c
+              c = a + b
+              a = b
+              b = c
+          document.write(c + " ; ")
+          contador++;
+          };
+          return contenedor;
+          };
+
+          var numero = parseInt(prompt("Por favor, ingrese un número entero positivo:".toUpperCase()));
+
+          if (isNaN(numero) || numero < 1) {
+              alert("Por favor, ingrese un número entero positivo válido.");
+          } else {
               
-              document.getElementById('resultado').textContent = "Los números de Fibonacci hasta " + n + " son: " + numerosFibonacci;
+          document.write("La suma de los " + numero + " números es " + fibonacci(numero) + ".");
+          }
+      </script>
+  </div>
+  <hr>
+  <div id="divisores múltiplos del número que ingresantes, de 2 y 3">
+      <h1>
+          2. Divisores múltiplos de 2 y 3
+      </h1>
+      <script> 
+          function sumaDivisores(numero) {
+              let suma = 0;
+              for (let i = 1; i < numero; i++) {
+                  if ((numero % i === 0) && (i % 2 === 0) && (i % 3 === 0)) {
+                      document.write(i + " ; ")
+                      suma += i;
+                  }
+              }
+              return suma;
+          }
+
+          var numero = parseInt(prompt("Por favor, ingrese un número entero positivo múltiplo de 2 y 3 para mostrarle la suma de todos sus divisores:"));
+
+          if (isNaN(numero) || numero < 1) {
+              alert("Por favor, ingrese un número entero positivo válido.");
+          } else {
+              var resultado = sumaDivisores(numero);
+              document.write("La suma de los divisores menores que " + numero + " es " + resultado + ".");
+          }
+      </script>
+  </div>
+  <hr>
+  <div id="contadorCaracterA">
+      <h1>
+          3. Contador de Caracteres A
+      </h1>
+      <script>
+          var texto = prompt("Por favor, ingrese un texto:");
+          let contador = 0;
+          function detectorA(texto) {
+              for (let i = 0; i < texto.length; i++) {
+                  if ((texto[i] == "a") || (texto[i] == "A") || (texto[i] == "á") || (texto[i] == "Á")) {
+                      contador ++;
+                  }
+              }
+              return contador;
+          }
+              var resultado = detectorA(texto);
+              document.write("El texto que ingresaste es " + texto + ". <br>");
+              document.write("El número de letras 'a' del texto introducido es " + resultado + ".");
+          
+      </script>
+  </div>
+  <hr>
+    <div id="contadorCaracterA">
+      <h1>
+          4. Revertidor de texto
+      </h1>
+      <label> Introduce manualmente otro texto
+        <input type="text" id="textoEntrada" placeholder="Ingresa texto aquí">
+        <button onclick="revertirYMostrar()">Revertir Texto</button>
+        <p id="textoRevertido"></p>
+      </label>  
+      <script>
+          var Texto = prompt("Por favor, introduce un texto para invertir el orden de sus caracteres.")
+          var TextoRevertido = " ";
+          for (var i = Texto.length - 1; i >= 0; i--) {
+              TextoRevertido += Texto[i];
+          }
+            
+          alert("El texto revertido es: " + TextoRevertido);
+          document.write("El texto que ingresaste es " + Texto + ". <br>");
+          document.write("El texto revertido es " + TextoRevertido + ".");
+          
+          function revertirTexto(texto) {
+            return texto.split("").reverse().join("");
+        }
+        //Código alternativo
+        function revertirYMostrar() {
+            var textoEntrada = document.getElementById("textoEntrada").value;
+            var textoRevertido = revertirTexto(textoEntrada);
+            document.getElementById("textoRevertido").innerText = textoRevertido;
+        }
+      </script>
+    </div>
+    <hr>
+    <div id="comparador">
+      <h1>
+        5. Comparación de dos números
+      </h1>
+      <p id="xd"> </p>
+      <br>
+      <script>
+        var c = parseFloat(prompt("Ahora compararemos si un número es mayor que otro, introduce un número, por favor"))
+        var b = parseFloat(prompt("Introduce un segundo número, por favor"))
+
+        function MayorEntreDos(c,b) {
+            if (!isNaN(c) && !isNaN(b)) {
+                    if (c > b) {
+                      document.getElementById("xd").innerText = `${c} es mayor que ${b}.`;
+                  } else if (b > c) {
+                    document.getElementById("xd").innerText = `${b} es mayor que ${c}.`;
+                  } else if (b == c) {
+                    document.getElementById("xd").innerText = `Tus entradas son numericamente iguales.`;
+
+                  }
+            } else {
+                document.write("Oye, una o todas tus entradas no son válidas xd.")
             }
-          </script>
-      </div>
+          return console.log("Sí, he recibido tu llamado.")  
+        }
+        let mostrarRes1 = MayorEntreDos(c,b);
+      </script>
+    </div>
+    <hr>
+    <div id="primos">
+      <h1>
+        6. Definir el mayor divisor primo de un número.
+      </h1>
+      <p id="xd2"> </p>
+      <br>
+      <script>
+        var n = parseInt(prompt("Introduce un número y hallaré su mayor divisor primo."))
+        function FactorPrimoGrande(n){
+          let Divisores = [];
+          for (let M = 0; M <= n; M++) {
+            let EsFactor = n % M == 0;
+            let EsPrimo = true;
+            if (EsFactor) {
+              for(let i = 2; i<M; i++){
+                if (M % i == 0){
+                  EsPrimo = false;
+                  continue;
+                }
+              }
+            }
+            if (EsFactor && EsPrimo){
+              Divisores.push(M)
+            }
+          }
+          return Divisores.pop()
+        } 
+        document.getElementById("xd2").innerText = `Su mayor divisor primo es ${FactorPrimoGrande(n)}.`
+      </script>
+    </div>
   </div>
 </body>
 <footer>
@@ -74,4 +216,4 @@
     <p style="color:white">Sin derechos reservados - Un alumno de la UNI (Pérez López)</p>
 </footer>
 </html>
-<!--Estar en la universidad es una cosa de locos. x2-->
+<!-- Estar en la universidad es una cosa de locos. x2 -->
