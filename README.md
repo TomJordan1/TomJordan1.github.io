@@ -1,4 +1,5 @@
 # Introducción a la computación 🐱‍💻
+(Página como ex-estudiante de la FIA de la UNI)
 "Hasta que no comiences a creer en ti mismo, no vas a tener una vida". - Rocky Balboa
 <br></br>
 Estudiante: Tom Jordan Pérez López - 20240376J
